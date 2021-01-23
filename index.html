@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>gulag</title>
+</head>
+
+<body>
+	<div class="wraper">
+		<!-- svg img -->
+		<svg display="none">
+			<symbol viewBox="0 0 512.005 512.005" id="search">
+				<g>
+					<g>
+						<path
+							d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+						S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+						c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+						 M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z" />
+					</g>
+				</g>
+			</symbol>
+			<symbol viewBox="0 0 74 74" id="img01">
+				<path d="m54 26.625a1 1 0 0 1 -1-1v-1.25a1 1 0 0 1 2 0v1.25a1 1 0 0 1 -1 1z" />
+				<path
+					d="m37 41.613a1 1 0 0 1 -1-1v-19.834a1 1 0 0 1 .654-.938l17-6.257a1 1 0 0 1 1.346.938v5.853a1 1 0 0 1 -2 0v-4.419l-15 5.521v17.7l15-5.521v-3.656a1 1 0 0 1 2 0v4.356a1 1 0 0 1 -.654.938l-17 6.257a1.015 1.015 0 0 1 -.346.062z" />
+				<path
+					d="m37 41.613a1.015 1.015 0 0 1 -.346-.062l-17-6.257a1 1 0 0 1 -.654-.938v-19.834a1 1 0 0 1 1.346-.938l17 6.257a1 1 0 0 1 .654.938v19.834a1 1 0 0 1 -1 1zm-16-7.955 15 5.521v-17.7l-15-5.523z" />
+				<path
+					d="m54 15.523a.989.989 0 0 1 -.385-.078l-16.615-6.923-16.615 6.923a1 1 0 1 1 -.77-1.845l17-7.084a1.007 1.007 0 0 1 .77 0l17 7.084a1 1 0 0 1 -.385 1.923z" />
+				<path
+					d="m54 67.561a1.014 1.014 0 0 1 -.346-.061l-17-6.258a1 1 0 0 1 -.654-.942v-19.687a1 1 0 0 1 1.391-.921l17 7.2a1 1 0 0 1 .609.921v18.748a1 1 0 0 1 -1 1zm-16-7.955 15 5.521v-16.647l-15-6.357z" />
+				<path
+					d="m54 67.561a1 1 0 0 1 -1-1v-18.743a1 1 0 0 1 .609-.921l17-7.2a1 1 0 0 1 1.391.916v19.687a1 1 0 0 1 -.654.938l-17 6.258a1.014 1.014 0 0 1 -.346.065zm1-19.081v16.647l15-5.521v-17.483z" />
+				<path
+					d="m71 41.613a1 1 0 0 1 -.346-.062l-16.654-6.13-16.654 6.13a1 1 0 0 1 -.692-1.877l17-6.257a1 1 0 0 1 .692 0l17 6.257a1 1 0 0 1 -.346 1.939z" />
+				<path
+					d="m20 67.561a1 1 0 0 1 -1-1v-18.743a1 1 0 0 1 .609-.921l17-7.2a1 1 0 0 1 1.391.916v19.687a1 1 0 0 1 -.654.938l-17 6.258a1.014 1.014 0 0 1 -.346.065zm1-19.081v16.647l15-5.521v-17.483z" />
+				<path
+					d="m20 67.561a1.014 1.014 0 0 1 -.346-.061l-17-6.258a1 1 0 0 1 -.654-.942v-19.687a1 1 0 0 1 1.391-.921l17 7.2a1 1 0 0 1 .609.921v18.748a1 1 0 0 1 -1 1zm-16-7.955 15 5.521v-16.647l-15-6.357z" />
+				<path
+					d="m37 41.613a1 1 0 0 1 -.346-.062l-16.654-6.13-16.654 6.13a1 1 0 0 1 -.692-1.877l17-6.257a1 1 0 0 1 .692 0l17 6.257a1 1 0 0 1 -.346 1.939z" />
+			</symbol>
+			<symbol viewBox="0 0 512 512" id="img02">
+				<g id="XMLID_1631_">
+					<g id="XMLID_321_">
+						<path id="XMLID_347_"
+							d="m462 0h-172.757c-5.523 0-10 4.477-10 10v81.444c0 4.167 2.584 7.898 6.486 9.362 3.899 1.463 8.301.356 11.044-2.783 5.738-6.567 14.037-10.03 22.749-9.519 13.936.827 25.172 11.945 26.137 25.86.545 7.859-2.094 15.337-7.431 21.057-5.343 5.727-12.596 8.88-20.423 8.88-8.052 0-15.718-3.488-21.032-9.569-2.742-3.139-7.144-4.248-11.044-2.783-3.901 1.464-6.486 5.195-6.486 9.362v2.623c-7.136-5.13-15.726-8.357-25.021-8.91-7.492-.445-14.799.83-21.465 3.629v-62.167c0-5.523-4.477-10-10-10h-172.757c-27.57 0-50 22.43-50 50v345.514c0 27.57 22.43 50 50 50h345.514c27.57 0 50-22.43 50-50v-21.378c0-5.523-4.477-10-10-10s-10 4.477-10 10v21.378c0 16.542-13.458 30-30 30h-162.757v-71.444c0-4.167-2.584-7.898-6.486-9.362-3.901-1.466-8.303-.356-11.044 2.783-5.314 6.082-12.98 9.57-21.032 9.57-7.827 0-15.08-3.154-20.423-8.88-5.337-5.72-7.977-13.199-7.432-21.058.965-13.916 12.201-25.033 26.137-25.86 8.71-.516 17.011 2.951 22.75 9.519 2.742 3.138 7.142 4.246 11.044 2.783 3.901-1.464 6.486-5.195 6.486-9.362v-71.444h52.2c-2.446 5.813-3.747 12.115-3.747 18.562 0 13.238 5.553 26.012 15.236 35.046 9.819 9.162 22.633 13.693 36.087 12.761 23.914-1.659 43.019-20.963 44.44-44.904.444-7.492-.829-14.799-3.629-21.465h52.169v51.379c0 5.523 4.477 10 10 10s10-4.477 10-10v-61.379c0-5.523-4.477-10-10-10h-.963c5.785-8.085 8.996-17.868 8.996-27.924 0-6.447-1.301-12.749-3.747-18.562h62.201c5.523 0 10-4.477 10-10v-172.759c0-27.57-22.43-50-50-50zm-442 116.486c0-16.542 13.458-30 30-30h162.757v71.444c0 4.167 2.584 7.898 6.486 9.362 3.898 1.463 8.301.355 11.044-2.783 5.737-6.566 14.033-10.035 22.749-9.519 13.935.828 25.172 11.945 26.137 25.861.545 7.859-2.094 15.337-7.432 21.058-5.343 5.726-12.596 8.88-20.423 8.88-8.052 0-15.718-3.488-21.031-9.569-2.743-3.14-7.145-4.248-11.044-2.783-3.902 1.464-6.486 5.195-6.486 9.362v71.444h-52.201c2.446-5.813 3.747-12.115 3.747-18.562 0-13.238-5.553-26.011-15.236-35.046-9.819-9.161-22.635-13.69-36.085-12.761-23.915 1.659-43.02 20.963-44.441 44.903-.445 7.492.829 14.8 3.628 21.465h-52.169zm171.292 231.297c-23.94 1.421-43.245 20.527-44.903 44.441-.933 13.451 3.599 26.267 12.76 36.085 9.035 9.683 21.809 15.236 35.046 15.236 6.447 0 12.748-1.3 18.562-3.747v52.202h-162.757c-16.542 0-30-13.458-30-30v-162.757h71.444c4.167 0 7.898-2.584 9.362-6.486s.355-8.303-2.783-11.044c-6.567-5.737-10.036-14.029-9.519-22.749.827-13.936 11.945-25.172 25.86-26.137 7.859-.544 15.337 2.094 21.058 7.432 5.726 5.343 8.88 12.596 8.88 20.423 0 8.052-3.488 15.718-9.569 21.031-3.138 2.742-4.247 7.143-2.783 11.044 1.464 3.902 5.195 6.486 9.362 6.486h71.444v52.169c-6.665-2.801-13.973-4.077-21.464-3.629zm156.198-51.009c6.566 5.737 10.036 14.029 9.519 22.749-.827 13.935-11.945 25.171-25.86 26.137-7.858.541-15.338-2.094-21.058-7.432-5.727-5.343-8.88-12.596-8.88-20.423 0-8.052 3.488-15.718 9.569-21.032 3.138-2.742 4.247-7.143 2.783-11.044s-5.195-6.486-9.362-6.486h-71.443v-52.2c5.813 2.446 12.115 3.747 18.562 3.747 10.056 0 19.84-3.211 27.924-8.996v.964c0 5.523 4.477 10 10 10h62.169c-2.8 6.666-4.073 13.973-3.629 21.465.552 9.296 3.779 17.885 8.909 25.021h-2.623c-4.167 0-7.898 2.584-9.362 6.486-1.465 3.901-.356 8.302 2.782 11.044zm144.51-84.017h-71.443c-4.167 0-7.898 2.584-9.362 6.486-1.464 3.901-.355 8.302 2.783 11.044 6.082 5.313 9.569 12.979 9.569 21.031 0 7.827-3.154 15.08-8.88 20.423-5.72 5.337-13.199 7.977-21.058 7.432-13.916-.965-25.033-12.202-25.86-26.137-.518-8.72 2.952-17.012 9.518-22.75 3.138-2.742 4.247-7.143 2.783-11.044s-5.195-6.486-9.362-6.486h-71.443v-52.201c5.813 2.446 12.115 3.747 18.562 3.747 13.238 0 26.012-5.553 35.046-15.236 9.162-9.819 13.693-22.634 12.76-36.085-1.659-23.915-20.963-43.02-44.903-44.441-7.495-.446-14.8.829-21.465 3.629v-52.169h162.755c16.542 0 30 13.458 30 30z" />
+						<path id="XMLID_351_"
+							d="m435.51 385.62c-2.63 0-5.21 1.07-7.07 2.93s-2.93 4.44-2.93 7.07 1.07 5.21 2.93 7.07 4.44 2.93 7.07 2.93 5.21-1.07 7.07-2.93c1.87-1.86 2.93-4.44 2.93-7.07s-1.06-5.21-2.93-7.07c-1.86-1.86-4.43-2.93-7.07-2.93z" />
+					</g>
+				</g>
+			</symbol>
+			<symbol viewBox="0 0 74 74" id="img03">
+				<path
+					d="m46.8 45.93a1 1 0 0 1 -.631-1.776l2.29-1.861a1 1 0 0 1 1.261 1.553l-2.29 1.861a1 1 0 0 1 -.63.223z" />
+				<path
+					d="m32.55 57.61a1 1 0 0 1 -.707-.293l-15.16-15.16a1 1 0 0 1 -.066-1.341l30.6-37.36a1 1 0 0 1 .726-.365l23.01-1.091a1.031 1.031 0 0 1 .754.292 1 1 0 0 1 .293.755l-1.09 23.01a1 1 0 0 1 -.365.726l-7.65 6.27a1 1 0 1 1 -1.268-1.547l7.306-5.988 1.016-21.467-21.467 1.017-29.745 36.315 13.88 13.879 8.109-6.645a1 1 0 0 1 1.268 1.547l-8.81 7.219a1 1 0 0 1 -.634.227z" />
+				<path
+					d="m54.53 39.61a1 1 0 0 1 -.633-1.775l2.291-1.869a1 1 0 0 1 1.264 1.549l-2.29 1.869a.992.992 0 0 1 -.632.226z" />
+				<path
+					d="m29.31 67.055a2.075 2.075 0 0 1 -1.474-.61l-20.281-20.281a2.086 2.086 0 0 1 0-2.948l5.035-5.035a2.134 2.134 0 0 1 2.949 0l20.28 20.281a2.083 2.083 0 0 1 0 2.948l-5.035 5.035a2.077 2.077 0 0 1 -1.474.61zm-15.246-27.481a.09.09 0 0 0 -.064.026l-5.031 5.03a.085.085 0 0 0 0 .12l20.281 20.281a.084.084 0 0 0 .12 0l5.035-5.031a.1.1 0 0 0 0-.12l-20.281-20.28a.086.086 0 0 0 -.06-.026z" />
+				<path
+					d="m8.656 72a6.655 6.655 0 0 1 -4.706-11.362l9.75-9.747a1.029 1.029 0 0 1 1.414 0l8 8a1 1 0 0 1 0 1.414l-9.752 9.745a6.608 6.608 0 0 1 -4.706 1.95zm5.744-18.988-9.039 9.04a4.656 4.656 0 1 0 6.584 6.584l9.04-9.039z" />
+				<path
+					d="m24.972 50.028a1 1 0 0 1 -.707-1.707l26.335-26.332a1 1 0 1 1 1.411 1.411l-26.332 26.335a1 1 0 0 1 -.707.293z" />
+			</symbol>
+			<symbol viewBox="0 -5 512 511" id="img04">
+				<path
+					d="m483.621094 105.785156-190.953125-96.578125c-22.960938-11.609375-50.375-11.609375-73.335938 0l-190.953125 96.578125c-8.304687 4.199219-28.378906 19.265625-28.378906 46.15625v196.976563c0 19.617187 10.875 37.300781 28.378906 46.15625l97.261719 49.191406h.007813l93.683593 47.382813c5.652344 2.859374 21.160157 8.972656 36.667969 8.972656s31.015625-6.113282 36.667969-8.972656l190.953125-96.574219c17.503906-8.855469 28.378906-26.539063 28.378906-46.15625v-196.976563c0-27.769531-20.074219-41.957031-28.378906-46.15625zm-257.519532-83.191406c18.722657-9.464844 41.074219-9.464844 59.796876 0l190.953124 96.574219c3.371094 1.707031 6.449219 3.921875 9.128907 6.546875l-103.019531 52.101562-110.339844-55.804687 75.976562-38.425781c3.695313-1.871094 5.175782-6.382813 3.304688-10.078126-1.867188-3.695312-6.382813-5.179687-10.074219-3.308593l-85.824219 43.40625-104.929687-53.066407zm37.398438 344.054688v-111.609376l111.972656-56.625v111.605469zm-248.5-214.707032c0-4.710937.921875-9.332031 2.652344-13.652344l103.875 52.53125v111.609376l-106.527344-53.875zm241 90.082032-110.339844-55.804688 110.34375-55.804688 110.339844 55.808594zm-119.472656-43.613282 111.972656 56.628906v111.609376l-111.972656-56.628907zm-101.378906-79.242187 99.308593-50.226563 104.925781 53.070313-110.339843 55.804687-103.023438-52.105468c2.679688-2.625 5.757813-4.835938 9.128907-6.542969zm101.378906 313.792969v-82.800782c0-4.140625-3.359375-7.5-7.5-7.5-4.144532 0-7.5 3.359375-7.5 7.5v75.214844l-86.378906-43.6875c-12.425782-6.285156-20.148438-18.84375-20.148438-32.769531v-83.550781l233.5 118.09375v101.503906c-7.78125-.894532-15.410156-3.167969-22.398438-6.703125zm149.371094 45.300781c-6.988282 3.535156-14.613282 5.804687-22.394532 6.699219v-101.503907l111.96875-56.628906v106.132813zm211.101562-129.34375c0 13.925781-7.722656 26.484375-20.148438 32.769531l-86.378906 43.6875v-106.132812l60.976563-30.839844c3.695312-1.867188 5.175781-6.378906 3.308593-10.078125-1.871093-3.695313-6.386718-5.175781-10.078124-3.308594l-54.203126 27.414063v-111.601563l103.875-52.535156c1.730469 4.324219 2.648438 8.941406 2.648438 13.648437v96.613282l-25.382812 12.839843c-3.695313 1.867188-5.175782 6.378907-3.308594 10.078125 1.871094 3.695313 6.386718 5.175782 10.078125 3.304688l18.613281-9.410156zm0 0" />
+			</symbol>
+			<symbol viewBox="0 0 24 24" id="facebook">
+				<path
+					d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+			</symbol>
+			<symbol viewBox="0 0 24 24" id="twitch">
+				<path
+					d="m.975 4.175v16.694h5.749v3.131h3.139l3.134-3.132h4.705l6.274-6.258v-14.61h-21.434zm3.658-2.09h17.252v11.479l-3.66 3.652h-5.751l-3.134 3.127v-3.127h-4.707z" />
+				<path d="m10.385 6.262h2.09v6.26h-2.09z" />
+				<path d="m16.133 6.262h2.091v6.26h-2.091z" />
+			</symbol>
+			<symbol viewBox="-21 -81 681.33464 681" id="twitter">
+				<path
+					d="m200.964844 515.292969c241.050781 0 372.871094-199.703125 372.871094-372.871094 0-5.671875-.117188-11.320313-.371094-16.9375 25.585937-18.5 47.824218-41.585937 65.371094-67.863281-23.480469 10.441406-48.753907 17.460937-75.257813 20.636718 27.054687-16.230468 47.828125-41.894531 57.625-72.488281-25.320313 15.011719-53.363281 25.917969-83.214844 31.808594-23.914062-25.472656-57.964843-41.402344-95.664062-41.402344-72.367188 0-131.058594 58.6875-131.058594 131.03125 0 10.289063 1.152344 20.289063 3.398437 29.882813-108.917968-5.480469-205.503906-57.625-270.132812-136.921875-11.25 19.363281-17.742188 41.863281-17.742188 65.871093 0 45.460938 23.136719 85.605469 58.316407 109.082032-21.5-.660156-41.695313-6.5625-59.351563-16.386719-.019531.550781-.019531 1.085937-.019531 1.671875 0 63.46875 45.171875 116.460938 105.144531 128.46875-11.015625 2.996094-22.605468 4.609375-34.558594 4.609375-8.429687 0-16.648437-.828125-24.632812-2.363281 16.683594 52.070312 65.066406 89.960937 122.425781 91.023437-44.855469 35.15625-101.359375 56.097657-162.769531 56.097657-10.5625 0-21.003906-.605469-31.2617188-1.816407 57.9999998 37.175781 126.8710938 58.871094 200.8867188 58.871094" />
+			</symbol>
+			<symbol viewBox="0 0 14.171 14.171" id="vk">
+				<g>
+					<path d="M13.268,0H0.905C0.405,0,0,0.405,0,0.904v12.363c0,0.499,0.405,0.904,0.905,0.904h12.362
+					c0.499,0,0.904-0.405,0.904-0.904V0.904C14.172,0.404,13.767,0,13.268,0z M11.755,8.635c0.259,0.264,0.821,0.707,0.719,1.158
+					c-0.094,0.414-0.712,0.263-1.312,0.287c-0.685,0.029-1.091,0.044-1.503-0.287C9.465,9.636,9.351,9.45,9.165,9.242
+					C8.996,9.054,8.783,8.717,8.493,8.73C7.972,8.756,8.135,9.482,7.95,9.977c-2.896,0.456-4.059-1.333-5.085-3.069
+					C2.368,6.067,1.65,4.261,1.65,4.261l2.048-0.007c0,0,0.657,1.195,0.831,1.503c0.148,0.262,0.311,0.47,0.479,0.704
+					c0.141,0.194,0.364,0.574,0.608,0.543c0.397-0.051,0.469-1.591,0.223-2.107C5.741,4.688,5.506,4.615,5.263,4.544
+					C5.345,4.026,7.56,3.918,7.918,4.32c0.52,0.584-0.36,2.21,0.352,2.684c1-0.524,1.854-2.718,1.854-2.718l2.398,0.015
+					c0,0-0.375,1.186-0.768,1.712c-0.229,0.308-0.989,0.994-0.959,1.503C10.819,7.919,11.437,8.311,11.755,8.635z" />
+				</g>
+			</symbol>
+			<symbol viewBox="-21 -117 682.66672 682" id="youtube">
+				<path
+					d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0" />
+			</symbol>
+			<symbol viewBox="0 0 488.85 488.85" id="eye__password">
+				<g>
+					<path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2
+						s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025
+						c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3
+						C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7
+						c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z" />
+				</g>
+			</symbol>
+		</svg>
+		<header>
+			<div class="header__conteiner">
+				<div class="menu__burger burger" id="menu__burger">
+					<span class="span__up"></span>
+					<span class="span__midle"></span>
+					<span class="span__down"></span>
+				</div>
+				<div class="header__content">
+					<div class="header__logo logo">
+						<a href="#">GULAG</a>
+					</div>
+					<div class="header__meny" id="header__meny">
+						<!-- button to download client -->
+						<div class="header__client">
+							<a class="download__client" href="#">Скачать клиент</a>
+						</div>
+						<!-- button search -->
+						<div class="header__search" id="header__search">
+							<svg class="search__icon" id="search__icon">
+								<use xlink:href="#search"></use>
+							</svg>
+							<form class="header__form" action="#" id="header__form">
+								<input type="text" placeholder="Search">
+							</form>
+						</div>
+						<!-- button register -->
+						<div class="header__register">
+							<a href="#popup__registretion" class="btn__register popup-link">
+								ЗАРЕГИСТРИРОВАТЬСЯ
+							</a>
+						</div>
+						<!-- button logine -->
+						<div class="header__login">
+							<a href="#popup__login" class="btn__login popup-link">
+								ВОЙТИ
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="start__content">
+			<div class='conteiner'>
+				<!-- header ttile block -->
+				<div class="header__title">
+					<h1 class="title title">YOUR LEADING</h1>
+					<h2 class="sub__title">COMPETITIVE GAMING PLATFORM</h2>
+					<p class="subsub__title">Play with over <span>15 million</span>gamers in leagues, <br> tournaments
+						and
+						ladders</p>
+				</div>
+				<!-- header info blok -->
+				<div class="header__info">
+					<div class="header__cards">
+						<div class="header__cards-Grup">
+							<!-- first card -->
+							<div class="info__body card__info">
+								<div class="card__info-img">
+									<svg id="search__icon">
+										<use xlink:href="#img01"></use>
+									</svg>
+								</div>
+								<div class="card__info-title">
+									ANTI-CHEAT
+								</div>
+								<div class="card__info-subtitle">
+									<p>FACEIT Anti-Cheat has banned over <br> <span>120,000</span>cheaters!</p>
+								</div>
+							</div>
+							<!-- second card -->
+							<div class="info__body card__info">
+								<div class="card__info-img">
+									<svg id="search__icon">
+										<use xlink:href="#img02"></use>
+									</svg>
+								</div>
+								<div class="card__info-title">
+									SKILL PROGRESSION
+								</div>
+								<div class="card__info-subtitle">
+									<p>Track your stats as you climb the ranks</p>
+								</div>
+							</div>
+						</div>
+						<div class="header__cards-Grup">
+							<!-- third card -->
+							<div class="info__body card__info">
+								<div class="card__info-img">
+									<svg id="search__icon">
+										<use xlink:href="#img03"></use>
+									</svg>
+								</div>
+								<div class="card__info-title">
+									MATCHMAKING
+								</div>
+								<div class="card__info-subtitle">
+									<p>Get matched with like-minded gamers and <br> compete for prizes</p>
+								</div>
+							</div>
+							<!-- fourth card -->
+							<div class="info__body card__info">
+								<div class="card__info-img">
+									<svg id="search__icon">
+										<use xlink:href="#img04"></use>
+									</svg>
+								</div>
+								<div class="card__info-title">
+									TOURNAMENTS
+								</div>
+								<div class="card__info-subtitle">
+									<p>Compete for real prizes with friends <br> and other players</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__info-btn create-btn">
+						<a href="#popup__registretion" class="popup-link">Create an account</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="offers">
+			<!-- Flex container -->
+			<div class="offers__allbox">
+				<!-- first card -->
+				<div class="offers__card card__offer">
+					<!-- Left card side -->
+					<div class="card__offer-left">
+						<div class="card__offer-img">
+							<img src="img/offers/01.png" alt="warzone">
+						</div>
+					</div>
+					<!-- Right card side -->
+					<div class="card__offer-right">
+						<div class="offers__title">
+							<h2>PLAY BETTER GAMES</h2>
+							<p>Find others to play with in seconds! <br>
+								You’ll get matched with equally ranked and like-minded gamers to improve your skill and
+								learn from the best.</p>
+						</div>
+						<div class="offers__btn-create create-btn">
+							<a href="#popup__registretion" class="popup-link">Create an account</a>
+						</div>
+					</div>
+				</div>
+				<!-- Second card -->
+				<div class="offers__card second__offer">
+					<!-- Left card side -->
+					<div class="card__offer-left">
+						<div class="card__offer-img">
+							<img src="img/offers/02.png" alt="warzone">
+						</div>
+					</div>
+					<!-- Right card side -->
+					<div class="card__offer-right">
+						<div class="offers__title">
+							<h2>TRACK YOUR STATS</h2>
+							<p>Do more than just play... Advanced stats let you track your progress as you climb through
+								the ranks.</p>
+						</div>
+						<div class="offers__btn-create create-btn">
+							<a href="#popup__registretion" class="popup-link">Create an account</a>
+						</div>
+					</div>
+				</div>
+				<!-- thirst card -->
+				<div class="offers__card thirst__offer">
+					<!-- Left card side -->
+					<div class="card__offer-left">
+						<div class="card__offer-img">
+							<img src="img/offers/03.png" alt="warzone">
+						</div>
+					</div>
+					<!-- Right card side -->
+					<div class="card__offer-right">
+						<div class="offers__title">
+							<h2>PLAY IN <br> COMMUNITIES!</h2>
+							<p>Join or create your own community using the FACEIT servers <br> for free with the
+								settings,
+								rules and the map pools <br> you want.</p>
+						</div>
+						<div class="offers__btn-create create-btn">
+							<a href="#popup__registretion" class="popup-link">Create an account</a>
+						</div>
+						<div class="offers__communities communities">
+							<div class="communities__card">
+								<img src="img/communities/01.png" alt="communities1">
+							</div>
+							<div class="communities__card">
+								<img src="img/communities/02.png" alt="communities2">
+							</div>
+							<div class="communities__card">
+								<img src="img/communities/03.png" alt="communities3">
+							</div>
+							<div class="communities__card">
+								<img src="img/communities/04.png" alt="communities4">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fouth card -->
+				<div class="offers__card fouth__offer">
+					<!-- Left card side -->
+					<div class="card__offer-left">
+						<div class="card__offer-img">
+							<img src="img/offers/04.png" alt="warzone">
+						</div>
+					</div>
+					<!-- Right card side -->
+					<div class="card__offer-right">
+						<div class="offers__title">
+							<h2>TOURNAMENTS</h2>
+							<p>Take part in professional tournaments with real prizes or <br> create your own and play
+								with friends.</p>
+						</div>
+						<div class="offers__btn-create create-btn">
+							<a href="#popup__registretion" class="popup-link">Create an account</a>
+						</div>
+					</div>
+				</div>
+				<!-- Fifth card -->
+				<div class="offers__card fifth__offer">
+					<!-- Left card side -->
+					<div class="card__offer-left">
+						<div class="card__offer-img">
+							<img src="img/offers/05.png" alt="warzone">
+						</div>
+					</div>
+					<!-- Right card side -->
+					<div class="card__offer-right">
+						<div class="offers__title">
+							<h2>WIN REAL PRIZES</h2>
+							<p>Complete missions or play in leagues, tournaments and hubs to win prizes ranging
+								from skins and chests to laptops,
+								gaming gear and more!</p>
+						</div>
+						<div class="offers__btn-create create-btn">
+							<a href="#popup__registretion" class="popup-link">Create an account</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="ready">
+			<div class='conteiner'>
+				<h2 class="ready__title title">READY TO TRY FACEIT?</h2>
+				<p class="ready__sub subsub__title">Compete with over <span>15 million</span> gamers now!</p>
+				<div class="ready-btn create-btn">
+					<button>Create an account</button>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="conteiner">
+				<div class="footer__content-up">
+					<div class="footer__title">
+						<h2>Your Leading Competitive Gaming Platform</h2>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__card-menu">
+							<nav>
+								<ul>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Anti-Cheat</a></li>
+									<li><a href="#">Client</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer__card-menu">
+							<nav>
+								<ul>
+									<li><a href="#">Bans</a></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">FAQ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer__card-menu">
+							<nav>
+								<ul>
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Developers</a></li>
+									<li><a href="#">Press</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!-- ?? footer__content-bottom -->
+				<div class="footer__content-bottom">
+					<div class="footer__logo logo">
+						<a href="#">GULAG</a>
+					</div>
+					<div class="footer__political">
+						<nav>
+							<ul>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms</a></li>
+								<li><a href="#">
+										<svg>
+											<use xlink:href="#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li><a href="#">
+										<svg>
+											<use xlink:href="#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li><a href="#">
+										<svg>
+											<use xlink:href="#twitch"></use>
+										</svg>
+									</a>
+								</li>
+								<li><a href="#">
+										<svg>
+											<use xlink:href="#youtube"></use>
+										</svg>
+									</a>
+								</li>
+								<li><a href="#">
+										<svg class="footer__vk">
+											<use xlink:href="#vk"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- popup Registration -->
+		<div class="popup__registretion popup" id="popup__registretion">
+			<div class="popup__body">
+				<div class="popup__content">
+					<div class="popup__header">
+						<h2>SIGN UP</h2>
+						<span class="popup__close-left close-popup"></span>
+						<span class="popup__close-right close-popup"></span>
+					</div>
+					<div class="popup__info">
+						<div class="popup__info-content">
+							<div class="popup_form">
+								<form action="text">
+									<label for="">Email address</label>
+									<input type="text" placeholder="Enter your email">
+									<label for="">Activision battle tag</label>
+									<input type="text" placeholder="Enter battle tag">
+									<div class="popup__info-password">
+										<label for="">Password</label>
+										<input type="password" placeholder="Enter your password">
+										<svg class="eye__password">
+											<use xlink:href="#eye__password"></use>
+										</svg>
+									</div>
+									<div class="popup__info-password">
+										<label for="">Confirm your password</label>
+										<input type="password" placeholder="Confirm your password">
+										<svg class="eye__password">
+											<use xlink:href="#eye__password"></use>
+										</svg>
+									</div>
+									<div class="popup__btn create-btn">
+										<button> SIGN UP AND PLAY!</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="popup__police">
+							<span>By signing up to our service, you agree to our <a href="">Terms & Conditions</a> and
+								<a href="#">Privacy Policy</a></span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<div class="popup__footer-text">
+							<span>Already registered?</span>
+						</div>
+						<div class="popup__footer-btn create-btn">
+							<button>LOGIN NOW</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- popup Login-->
+		<div class="popup__login popup" id="popup__login">
+			<div class="popup__body">
+				<div class="popup__content">
+					<div class="popup__header">
+						<h2>LOGIN</h2>
+						<span class="popup__close-left close-popup"></span>
+						<span class="popup__close-right close-popup"></span>
+					</div>
+					<div class="popup__info">
+						<div class="popup__info-content">
+							<div class="popup_form">
+								<form action="text">
+									<label for="">Email address</label>
+									<input type="text" placeholder="Enter your email">
+									<div class="popup__info-password">
+										<label for="">Password</label>
+										<input type="password" placeholder="Enter your password">
+										<svg class="eye__password">
+											<use xlink:href="#eye__password"></use>
+										</svg>
+									</div>
+									<a href="#" class="fogot__password">Forgot your
+										password?</a>
+									<div class="popup__btn create-btn">
+										<button> LOGIN WITH EMAIL</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="popup__police">
+							<span>By signing up to our service, you agree to our <a href="">Terms & Conditions</a> and
+								<a href="#">Privacy Policy</a></span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<div class="popup__footer-text">
+							<span>Already registered?</span>
+						</div>
+						<div class="popup__footer-btn create-btn">
+							<button>LOGIN NOW</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Подклюаем JS-->
+	<script src="js/main.js"></script>
+	<script src="js/popups.js"></script>
+</body>
+
+</html>

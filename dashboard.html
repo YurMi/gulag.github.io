@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>dashboard</title>
+</head>
+
+<body>
+    <svg display="none">
+        <symbol viewBox="0 0 512.005 512.005" id="search">
+            <g>
+                <g>
+                    <path
+                        d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+        						S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+        						c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+        						 M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z" />
+                </g>
+            </g>
+        </symbol>
+        <symbol viewBox="0 -34 480.0002 480" id="friends">
+            <path
+                d="m152 144c39.765625 0 72-32.234375 72-72s-32.234375-72-72-72-72 32.234375-72 72c.042969 39.746094 32.253906 71.957031 72 72zm0-128c30.929688 0 56 25.070312 56 56s-25.070312 56-56 56-56-25.070312-56-56c.039062-30.910156 25.089844-55.960938 56-56zm0 0" />
+            <path
+                d="m368 136c30.929688 0 56-25.070312 56-56s-25.070312-56-56-56-56 25.070312-56 56c.039062 30.910156 25.089844 55.960938 56 56zm0-96c22.089844 0 40 17.910156 40 40s-17.910156 40-40 40-40-17.910156-40-40c.027344-22.082031 17.917969-39.972656 40-40zm0 0" />
+            <path
+                d="m408 144h-8c-2.121094 0-4.15625.84375-5.65625 2.34375l-26.398438 26.398438-26.816406-26.398438c-1.492187-1.472656-3.503906-2.300781-5.601562-2.304688h-7.527344c-20.054688.035157-39.1875 8.425782-52.800781 23.152344-16.046875-15.003906-37.230469-23.304687-59.199219-23.191406-2.121094 0-4.15625.84375-5.65625 2.34375l-58.34375 58.34375-58.34375-58.34375c-1.5-1.5-3.535156-2.34375-5.65625-2.34375-48.574219.066406-87.9335938 39.425781-88 88v101.601562c-.00390625 9.496094 5.589844 18.101563 14.273438 21.949219l121.511718 53.992188c10.316406 4.605469 22.105469 4.605469 32.421875 0l121.519531-54c8.679688-3.847657 14.273438-12.449219 14.273438-21.941407v-13.511718l56.921875 22.117187c2.238281.691407 4.570313 1.046875 6.917969 1.050781 2.640625-.019531 5.261718-.433593 7.777344-1.234374l89.039062-34.566407c9.277344-3.558593 15.382812-12.480469 15.34375-22.417969v-69.039062c-.042969-39.746094-32.253906-71.957031-72-72zm-120 189.601562c0 3.179688-1.886719 6.054688-4.800781 7.328126l-121.519531 54.007812c-6.175782 2.757812-13.238282 2.757812-19.414063 0l-121.464844-54.007812c-2.914062-1.273438-4.800781-4.148438-4.800781-7.328126v-101.601562c.050781-38.5 30.339844-70.167969 68.800781-71.929688l61.597657 61.601563c3.125 3.125 8.191406 3.125 11.3125 0l61.601562-61.601563c12.363281.550782 24.371094 4.296876 34.855469 10.875 5.886719 3.648438 11.199219 8.144532 15.777343 13.34375 11.671876 13.144532 18.101563 30.128907 18.054688 47.710938zm176-48.5625c.007812 3.324219-2.039062 6.308594-5.144531 7.496094l-88.457031 34.375c-1.34375.46875-2.796876.539063-4.183594.203125l-62.214844-24.183593v-70.929688c0-2.566406-.128906-5.121094-.351562-7.65625-.074219-.800781-.207032-1.65625-.304688-2.488281-.191406-1.6875-.398438-3.375-.6875-5.046875-.175781-.984375-.398438-1.953125-.609375-2.929688-.3125-1.496094-.640625-2.992187-1.03125-4.460937-.273437-1.027344-.582031-2.042969-.886719-3.050781-.425781-1.398438-.871094-2.78125-1.367187-4.152344-.371094-1.03125-.761719-2.046875-1.175781-3.0625-.53125-1.320313-1.097657-2.625-1.691407-3.921875-.460937-1.007813-.933593-2.007813-1.4375-2.992188-.640625-1.269531-1.335937-2.511719-2.042969-3.75-.550781-.960937-1.085937-1.921875-1.660156-2.855469-.800781-1.257812-1.601562-2.472656-2.472656-3.6875-.601562-.855468-1.167969-1.730468-1.792969-2.5625-.128906-.167968-.230469-.351562-.359375-.519531 10.625-11.976562 25.859375-18.839843 41.871094-18.863281h4.238281l30.160157 29.695312c3.132812 3.085938 8.164062 3.070313 11.273437-.039062l29.640625-29.65625h4.6875c30.910156.039062 55.960938 25.089844 56 56zm0 0" />
+        </symbol>
+        <symbol viewBox="0 0 512 512" id="three-point__menu">
+            <g>
+                <g>
+                    <g>
+                        <circle cx="256" cy="256" r="64" />
+                        <circle cx="256" cy="448" r="64" />
+                        <circle cx="256" cy="64" r="64" />
+                    </g>
+                </g>
+            </g>
+        </symbol>
+    </svg>
+    <header class="dashboard__header">
+        <div class="dashboard-header__conteiner">
+            <div class="dashboard-menu__burger" id="menu__burger">
+                <span class="span__up"></span>
+                <span class="span__midle"></span>
+                <span class="span__down"></span>
+            </div>
+            <div class="dashboard__header-content">
+                <div class="header__logo logo">
+                    <a href="index.html">G</a>
+                </div>
+                <div class="dashboard__header-menu" id="header__meny">
+                    <!-- button search -->
+                    <div class="dashboard__header-search" id="header__search">
+                        <svg class="search__icon" id="search__icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                        <form class="header__form" action="#" id="header__form">
+                            <input type="text" placeholder="Search">
+                        </form>
+                    </div>
+                    <!-- button friends -->
+                    <div class="dashboard__header-friends">
+                        <a href="#">Друзья</a>
+                        <svg class="friends__iqon">
+                            <use xlink:href="#friends"></use>
+                        </svg>
+                    </div>
+                    <!-- dashboard user -->
+                    <div class="dashboard__header-user">
+                        <div class="user__iqon"></div>
+                        <div class="user__info">
+                            <div class="user__name">
+                                <span>Yurii Mitrofanov</span>
+                            </div>
+                            <div class="user__faceitt">
+                                <p>F<span>0</span></p>
+                            </div>
+                        </div>
+                        <div class="user__info-menu">
+                            <svg class="three-point__menu">
+                                <use xlink:href="#three-point__menu"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dasheader__body">
+        <div class="conteiner">
+            <div class="info">
+                <div class="info__title">
+                    <h2>Панель управления</h2>
+                </div>
+                <div class="info__menu">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">Позиции</a>
+                            </li>
+                            <li class="info__menu-m">
+                                <a href="#">Матч</a>
+                                <div class="info__menu-sub">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="#">Название матча</a></li>
+                                            <li><a href="#">Название матча</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="info__position">
+                <div class="info__position-title">
+                    <span>Позиции</span>
+                </div>
+                <div class="info__position-table">
+                    <table>
+                        <!-- Column Name -->
+                        <tr class="colum__name">
+                            <th class="rang__name">Ранг</th>
+                            <th class="player__name">Игрок</th>
+                            <th class="kiills__name">Кол-во убийств</th>
+                            <th>%</th>
+                        </tr>
+                        <!-- Line -->
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                        <tr class="table__body bg-color-2">
+                            <td class="rang__column">1</td>
+                            <td class="player__column">Yurii</td>
+                            <td class="kiills__column">8</td>
+                            <td class="percent__column">90</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="js/popups.js"></script>
+</body>
+
+</html>
